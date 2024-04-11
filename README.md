@@ -1,45 +1,62 @@
-Clonar el repositorio desde Git:
-La persona interesada debe clonar el repositorio Git en su máquina local. Puedes proporcionarle la URL del repositorio.
+CRUD DJANGO
+Este es un proyecto de ejemplo que muestra cómo implementar una aplicación web utilizando Django.
+
+Descripción
+Este proyecto utiliza Django, un framework web de alto nivel basado en Python, para construir una aplicación web que gestiona documentos. Los usuarios pueden registrarse, iniciar sesión, subir documentos, aprobar documentos y más.
+
+Características
+Registro de usuarios por correo electrónico
+Inicio de sesión de usuarios
+Subida de documentos
+Aprobación de documentos por parte de usuarios administradores
+Autenticación de doble factor con Google Authenticator
+Gestión de documentos por parte de los usuarios
+Requisitos
+Python 3.x
+Django
+Otros requisitos específicos del proyecto (base de datos, librerías adicionales, etc.)
+Instalación
+Clona este repositorio en tu máquina local:
 
 bash
 Copy code
-git clone <URL_del_repositorio>
-Configurar el entorno virtual (opcional pero recomendado):
-Es una buena práctica utilizar un entorno virtual para el proyecto de Django. La persona puede crear y activar un entorno virtual utilizando virtualenv o venv.
+git clone 
+Crea un entorno virtual y actívalo:
 
 bash
 Copy code
-# Crear un entorno virtual (solo si no está utilizando uno ya)
-python -m venv myenv
-
-# Activar el entorno virtual
+py -m venv venv
 # En Windows
-myenv\Scripts\activate
+.\venv\Scripts\activate
 # En macOS y Linux
 source myenv/bin/activate
-Instalar las dependencias:
-La persona debe instalar las dependencias del proyecto utilizando pip, preferiblemente dentro del entorno virtual.
+Instala las dependencias del proyecto:
 
 bash
 Copy code
-cd <nombre_del_proyecto>
 pip install -r requirements.txt
-Configurar la base de datos:
-Si el proyecto utiliza una base de datos, la persona debe configurarla según lo indicado en el archivo de configuración de Django (settings.py). Esto puede incluir la creación de una base de datos, configuración de las credenciales de acceso, etc.
+Configura la base de datos y otros ajustes en settings.py según sea necesario.
+
+Realiza las migraciones:
 
 bash
 Copy code
-# Ejemplo de migraciones
 python manage.py makemigrations
 python manage.py migrate
-Crear un archivo de variables de entorno (opcional):
-Si el proyecto utiliza variables de entorno para configurar aspectos sensibles (por ejemplo, claves secretas, credenciales de bases de datos, etc.), la persona debe crear un archivo .env y configurar las variables necesarias.
-
-Ejecutar el servidor de desarrollo:
-Finalmente, la persona puede ejecutar el servidor de desarrollo de Django para probar el proyecto localmente.
+Ejecuta el servidor de desarrollo:
 
 bash
 Copy code
 python manage.py runserver
-Acceder al proyecto en el navegador:
-Después de ejecutar el servidor de desarrollo, la persona puede acceder al proyecto en un navegador web visitando http://localhost:8000 (o cualquier otro puerto que estés utilizando) en su máquina local.
+Accede a la aplicación en tu navegador web en http://localhost:8000.
+
+Contribución
+Si deseas contribuir a este proyecto, sigue estos pasos:
+
+Realiza un fork del repositorio.
+Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
+Realiza tus cambios y haz commit (git commit -am 'Agrega nueva característica').
+Sube tus cambios (git push origin feature/nueva-caracteristica).
+Crea un nuevo Pull Request.
+Licencia
+Este proyecto está bajo la licencia MIT. Puedes encontrar más detalles en el archivo LICENSE.
