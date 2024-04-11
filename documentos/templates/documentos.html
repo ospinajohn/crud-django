@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="text-center">
+  Tus documentos - {{ user.first_name }} {{ user.last_name }}
+</h1>
+
+{% if mensaje %}
+<div class="alert alert-success">{{ mensaje }}</div>
+{% endif %} {% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="text-center">¿Desea subir un documento?</h2>
+    <div class="text-center">
+      <p>En esta sección podrá subir documentos en formato PDF.</p>
+      <a href="{% url 'upload_documento' %}" class="btn btn-primary btn-lg m-2"
+        >Subir documento</a
+      >
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripción</th>
+      <th>Archivo adjunto</th>
+      <th>Estado</th>
+      <th>Aprobado por</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for documento in documentos %}
+
+    <tr>
+      <td>{{ documento.titulo }}</td>
+      <td>{{ documento.descripcion }}</td>
+      <td>
+        <a href="{{ documento.archivo.url }}" target="_blank">Ver documento</a>
+      </td>
+      <td>
+        {% if documento.aprobado %}Aprobado{% else %}Sin aprobación{% endif %}
+      </td>
+      <td>
+        {% if documento.aprobador %} {{ documento.aprobador.username }} {% else %} Sin aprobador {% endif %}
+      </td>
+      <td>
+        <div class="btn-group">
+          <a
+            href="{% url 'update_documento' documento.id %}"
+            class="btn btn-warning"
+            >Editar</a
+          >
+          <a
+            href="{% url 'delete_documento' documento.id %}"
+            class="btn btn-danger"
+            >Eliminar</a
+          >
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% if documentos|length == 0 %}
+<p class="text-center">No hay documentos</p>
+{% endif %} {% comment %}
+<a href="{{ url_for('documentos.subir') }}" class="btn btn-primary"
+  >Subir documento</a
+>
+{% endcomment %} {% endblock %}

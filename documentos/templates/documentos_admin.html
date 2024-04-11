@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="text-center">
+  Documentos pendientes de aprobación
+</h1>
+
+{% if mensaje %}
+<div class="alert alert-success">{{ mensaje }}</div>
+{% endif %} {% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripción</th>
+      <th>Archivo adjunto</th>
+      <th>Estado</th>
+      <th>Subido por </th>
+      <th>Aprobado por</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for documento in documentos %}
+
+    <tr>
+      <td>{{ documento.titulo }}</td>
+      <td>{{ documento.descripcion }}</td>
+      <td>
+        <a href="{{ documento.archivo.url }}" target="_blank">Ver documento</a>
+      </td>
+      <td>
+        {% if documento.aprobado %}Aprobado{% else %}Sin aprobación{% endif %}
+      </td>
+      <td>{{ documento.usuario.first_name }}</td>
+      <td>{{ documento.id_aprobador|default:"sin accion" }}</td>
+      <td>
+        <div class="btn-group">
+          <a
+            href="{% url 'update_documento' documento.id %}"
+            class="btn btn-warning"
+            >Editar</a
+          >
+          <a
+            href="{% url 'delete_documento' documento.id %}"
+            class="btn btn-danger"
+            >Eliminar</a
+          >
+          <a href="{% url 'aprobar_documento' documento.id %}" class="btn btn-success"
+            >Aprobar</a
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% if documentos|length == 0 %}
+<p class="text-center">No hay documentos</p>
+{% endif %} {% endblock %}

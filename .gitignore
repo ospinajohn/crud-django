@@ -1,0 +1,55 @@
+# Archivos y directorios generados por Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.log
+*.db
+
+# Archivos y directorios generados por el entorno virtual
+venv/
+env/
+*.env
+
+# Archivos y directorios específicos de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos y directorios generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros archivos y directorios personalizados
+secret_key.txt
+media/
+static/
+
+# Archivos generados por el sistema
+*.pyc
+__pycache__/
+
+# Directorios de entornos virtuales
+venv/
+env/
+
+# Archivos de dependencias
+/node_modules
+/vendor
+
+# Archivos de configuración local
+.env
+settings_local.py
+
+# Archivos compilados
+*.pyc
+*.class
+
+# Archivos de logs y caché
+/logs/
+/cache/
+
+/documentos/pdfs/
