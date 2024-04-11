@@ -1,8 +1,8 @@
-CRUD DJANGO
-Este es un proyecto de ejemplo que muestra cómo implementar una aplicación web utilizando Django.
+#CRUD Django
+Este proyecto es un ejemplo de cómo implementar una aplicación web utilizando Django, un framework web de alto nivel basado en Python.
 
 Descripción
-Este proyecto utiliza Django, un framework web de alto nivel basado en Python, para construir una aplicación web que gestiona documentos. Los usuarios pueden registrarse, iniciar sesión, subir documentos, aprobar documentos y más.
+La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de documentos. Los usuarios pueden registrarse, iniciar sesión, subir documentos, aprobar documentos y más.
 
 Características
 Registro de usuarios por correo electrónico
@@ -20,7 +20,7 @@ Clona este repositorio en tu máquina local:
 
 bash
 Copy code
-git clone 
+git clone <URL_del_repositorio>
 Crea un entorno virtual y actívalo:
 
 bash
