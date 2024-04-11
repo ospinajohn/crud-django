@@ -53,3 +53,5 @@ settings_local.py
 /cache/
 
 /documentos/pdfs/
+
+db.sqlite3
