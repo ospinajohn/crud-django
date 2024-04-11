@@ -32,11 +32,16 @@ La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
 
     ### En Windows
     ```bash
-    py -m venv venv
+    cd .\crud-django\
+    ```
 
-    
+    ```bash
+    py -m venv venv
+    ```
+    ```bash
     .\venv\Scripts\activate
     ```
+    
 
     ### En macOS y Linux
    ```bash
