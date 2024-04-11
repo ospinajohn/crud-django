@@ -26,12 +26,14 @@ def signup(request):
                 if request.POST["email"] == "admin@admin.com":
                     user = User.objects.create_superuser(
                         request.POST["email"], password=request.POST["password1"], first_name=request.POST["name"], last_name=request.POST["last_name"])
+                    url = 'admin_documentos'
                 else:
                     user = User.objects.create_user(
                         request.POST["email"], password=request.POST["password1"], first_name=request.POST["name"], last_name=request.POST["last_name"])
+                    url = 'documentos_usuario'
                 user.save()
                 login(request, user)
-                return redirect('documentos_usuario')
+                return redirect(url)
             except IntegrityError:
                 return render(request, 'signup.html', {"error": "Este email ya ha sido registrado."})
         else:
@@ -46,7 +48,7 @@ def login_view(request):
             return render(request, 'login.html', {"error": "Usuario y/o contraseña incorrectos."})
         else:
             login(request, user)
-            if user.is_superuser:
+            if user.is_staff:
                 return redirect('admin_documentos')
             else:
                 return redirect('documentos_usuario')
