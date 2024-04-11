@@ -25,7 +25,7 @@ La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
 1. Clona este repositorio en tu máquina local:
 
     ```bash
-    git clone 
+    git clone https://github.com/ospinajohn/crud-django.git
     ```
 
 2. Crea un entorno virtual y actívalo:
