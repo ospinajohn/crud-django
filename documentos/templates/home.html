@@ -1,25 +1,23 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
-
-<h1>Documentos</h1>
-
-<p>En esta sección podrás encontrar todos los documentos que necesitas para tu trámite.</p>
-
-<div class="row">
-  <p>Para poder acceder a los documentos, es necesario que te registres en el sistema. Si ya tienes una cuenta, puedes iniciar sesión en el siguiente enlace:</p>
-
+<div class="jumbotron">
+  <h1 class="display-4">¡Bienvenido a Documentos!</h1>
+  <p class="lead">
+    En esta sección podrás encontrar todos los documentos que necesitas para tu
+    trámite.
+  </p>
+  <hr class="my-4" />
+  <p>
+    Para poder acceder a los documentos, es necesario que te registres en el
+    sistema. Si ya tienes una cuenta, puedes iniciar sesión en el siguiente
+    enlace:
+  </p>
   <div class="buttons">
-    <a href="login.html" class="btn btn-primary">Iniciar sesión</a>
+    <a href="login" class="btn btn-primary">Iniciar sesión</a>
     <a href="signup" class="btn btn-secondary">Registrarse</a>
   </div>
 </div>
 
 {% if message %}
-  <div class="alert alert-success" role="alert">
-    {{ message }}
-  </div>
-{% endif %}
-
-
-{% endblock %}
+<div class="alert alert-success" role="alert">{{ message }}</div>
+{% endif %} {% endblock %}
