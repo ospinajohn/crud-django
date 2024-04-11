@@ -128,4 +128,4 @@ def aprobar_documento(request, documento_id):
     documento.aprobado = True
     documento.aprobador = request.user
     documento.save()
-    return redirect('admin_documentos', {"mensaje": "Documento aprobado."})
+    return redirect('admin_documentos')
