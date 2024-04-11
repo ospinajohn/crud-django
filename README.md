@@ -30,38 +30,43 @@ La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
 
 2. Crea un entorno virtual y actívalo:
 
+    ### En Windows
     ```bash
     py -m venv venv
-    # En Windows
+
+    
     .\venv\Scripts\activate
-    # En macOS y Linux
-    source myenv/bin/activate
     ```
 
-3. Instala las dependencias del proyecto:
+    ### En macOS y Linux
+   ```bash
+    source myenv/bin/activate
+   ```
+
+4. Instala las dependencias del proyecto:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Configura la base de datos y otros ajustes en `settings.py` según sea necesario.
+5. Configura la base de datos y otros ajustes en `settings.py` según sea necesario.
 
-5. Realiza las migraciones:
+6. Realiza las migraciones:
 
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
 
-6. Ejecuta el servidor de desarrollo:
+7. Ejecuta el servidor de desarrollo:
 
     ```bash
     python manage.py runserver
     ```
 
-7. Accede a la aplicación en tu navegador web en `http://localhost:8000`.
+8. Accede a la aplicación en tu navegador web en `http://localhost:8000`.
 
-8. Credenciales 
+9. Credenciales 
     Se agrego una pequeña logica en el codigo que almomento de crear un usuario este se crea como superusuario, para poder acceder a la parte de administrador y poder aprobar los documentos que se suban a la plataforma.
 
     Los datos que debes usar para crear el super usuario son los siguientes:
