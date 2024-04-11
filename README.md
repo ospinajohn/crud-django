@@ -12,7 +12,6 @@ La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
 - Inicio de sesión de usuarios
 - Subida de documentos
 - Aprobación de documentos por parte de usuarios administradores
-- Autenticación de doble factor con Google Authenticator
 - Gestión de documentos por parte de los usuarios
 
 ## Requisitos
@@ -26,7 +25,7 @@ La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
 1. Clona este repositorio en tu máquina local:
 
     ```bash
-    git clone <URL_del_repositorio>
+    git clone 
     ```
 
 2. Crea un entorno virtual y actívalo:
