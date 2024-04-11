@@ -61,6 +61,26 @@ La aplicación proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) 
 
 7. Accede a la aplicación en tu navegador web en `http://localhost:8000`.
 
+8. Credenciales 
+    Se agrego una pequeña logica en el codigo que almomento de crear un usuario este se crea como superusuario, para poder acceder a la parte de administrador y poder aprobar los documentos que se suban a la plataforma.
+
+    Los datos que debes usar para crear el super usuario son los siguientes:
+
+    - Correo electronico: admin@admin.com
+    - Contraseña: la que desees.
+
+    Una vez creado el super usuario podras acceder a la parte de administrador y aprobar los documentos que se suban a la plataforma, iniciando sesion norlamente con el correo electronico y la contraseña que hayas creado.
+
+    Para subir documentos debes iniciar sesion con un correo electronico diferente al que se creo como super usuario.
+
+## Uso
+
+Puedes utilizar esta aplicación para gestionar documentos y usuarios. Puedes subir documentos, aprobarlos, eliminarlos y más.
+
+
+
+
+
 ## Contribución
 
 Si deseas contribuir a este proyecto, sigue estos pasos:
